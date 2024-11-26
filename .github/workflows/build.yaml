@@ -40,8 +40,6 @@ jobs:
 
       # Step 3: Build the project (using Maven)
       - name: Build with Maven
-        run: mvn clean package
-
-      - name: Mark optional JDKs as non-failing
         if: ${{ matrix.mandatory == 'false' }}
         continue-on-error: true
+        run: mvn clean package
