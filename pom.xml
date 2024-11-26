@@ -54,6 +54,42 @@
 				</maven.compiler.target>
 			</properties>
 		</profile>
+		<profile>
+			<id>
+				java-21
+			</id>
+			<activation>
+				<jdk>
+					21
+				</jdk>
+			</activation>
+			<properties>
+				<maven.compiler.source>
+					21
+				</maven.compiler.source>
+				<maven.compiler.target>
+					21
+				</maven.compiler.target>
+			</properties>
+		</profile>
+		<profile>
+			<id>
+				java-23
+			</id>
+			<activation>
+				<jdk>
+					23
+				</jdk>
+			</activation>
+			<properties>
+				<maven.compiler.source>
+					23
+				</maven.compiler.source>
+				<maven.compiler.target>
+					23
+				</maven.compiler.target>
+			</properties>
+		</profile>
 	</profiles>
 	<modelVersion>
 		4.0.0
