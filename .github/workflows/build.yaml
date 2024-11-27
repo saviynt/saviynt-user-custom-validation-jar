@@ -31,5 +31,5 @@ jobs:
       # Step 3: Build the project (using Maven)
       - name: Build with Maven
         run: mvn clean package
-       - name: Test with Mavne
+      - name: Test with Mavne
         run: mvn test       
