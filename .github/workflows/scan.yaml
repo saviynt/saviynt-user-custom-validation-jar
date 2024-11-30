@@ -13,7 +13,7 @@ jobs:
 
     steps:
       - name: Echo location
-        run: echo "GITHUB_WROKSPACE=${{ GITHUB_WORKSPACE }}" >> $GITHUB_ENV
+        run: echo "GitHub Workspace: $GITHUB_WORKSPACE"
 
       # Step 1: Checkout the code
       - name: Scan current project
