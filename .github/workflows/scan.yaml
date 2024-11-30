@@ -12,8 +12,10 @@ jobs:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
 
     steps:
-      - name: Echo location
-        run: echo "GitHub Workspace: $GITHUB_WORKSPACE"
+      - name: Echo GitHub Workspace
+        run: |
+          echo ${{ github.workspace }}
+          echo $GITHUB_WORKSPACE
 
       # Step 1: Checkout the code
       - name: Scan current project
