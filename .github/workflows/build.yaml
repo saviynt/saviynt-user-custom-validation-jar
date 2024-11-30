@@ -49,7 +49,7 @@ jobs:
       - name: Scan with Grype
         uses: anchore/scan-action@v3
         with:
-          path: "target/userpreprocessor.jar"
+          path: "target"
           fail-build: true
           severity-cutoff: medium
           output: scan_results.json
