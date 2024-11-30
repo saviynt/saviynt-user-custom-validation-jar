@@ -18,10 +18,14 @@ jobs:
 
     steps:
       # Step 0: store java version for future use
+      - name: Write a value to a file
+        run: |
+          echo ${{ matrix.java-version }} > artifact_java_version.txt
+
       - name: Upload matrix value as artifact
         uses: actions/upload-artifact@v3
         with:
-          name: ${{ matrix.java-version }}
+          name: artifact_java_version
           path: artifact_java_version.txt
 
       # Step 1: Checkout the code
