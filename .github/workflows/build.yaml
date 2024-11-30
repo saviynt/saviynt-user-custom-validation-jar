@@ -46,7 +46,7 @@ jobs:
       - name: Test with Maven
         run: mvn test       
 
-      - name: Scan current project
+      - name: Scan with Grype
         uses: anchore/scan-action@v3
         with:
-          path: "target"
+          path: "/home/runner/work/saviynt-user-custom-validation-jar/saviynt-user-custom-validation-jar/target"
