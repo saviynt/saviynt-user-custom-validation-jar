@@ -1,0 +1,32 @@
+name: scan
+
+on:
+  workflow_run:
+    workflows: [build]
+    types: [completed]
+
+jobs:
+  on-success:
+    runs-on: ubuntu-latest
+
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+
+    steps:
+      - name: Download artifact from parent workflow
+        uses: actions/download-artifact@v3
+        with:
+          name: artifact_java_version
+
+      - name: Read matrix value
+        run: |
+          JAVA_VERSION=$(cat artifact_java_version.txt)
+          echo "Java version value from parent workflow: $JAVA_VERSION"
+
+      - name: Run conditionally
+        if: contains(steps.read.outputs.JAVA_VERSION, '8')
+        run: echo "This runs only for Java 8."
+      # Step 1: Checkout the code
+      - name: Scan current project
+        uses: anchore/scan-action@v3
+        with:
+          path: "target"
