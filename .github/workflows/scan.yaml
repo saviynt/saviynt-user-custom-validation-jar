@@ -19,6 +19,6 @@ jobs:
 
       # Step 1: Checkout the code
       - name: Scan current project
-        uses: anchore/scan-action@v3
+        uses: anchore/scan-action@v5
         with:
           path: "/home/runner/work/saviynt-user-custom-validation-jar/saviynt-user-custom-validation-jar/target"
