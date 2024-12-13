@@ -47,7 +47,7 @@ jobs:
         run: mvn test       
 
       - name: Scan with Grype
-        uses: anchore/scan-action@v3
+        uses: anchore/scan-action@v6
         with:
           path: "target"
           fail-build: true
