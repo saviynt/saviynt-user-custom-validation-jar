@@ -23,7 +23,7 @@ jobs:
           echo ${{ matrix.java-version }} > artifact_java_version.txt
 
       - name: Upload matrix value as artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: artifact_java_version
           path: $GITHUB_WORKSPACE/artifact_java_version.txt
