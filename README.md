@@ -8,5 +8,5 @@ https://docs.saviyntcloud.com/bundle/TPAG-Guide-v24x/page/Content/Validation-Fra
 
 It is currently built against JVM 8, 11, 17, 21, and 23. See more in the [GitHub action workflow configuration](https://github.com/grokify/saviynt-user-custom-validation-jar/blob/main/.github/workflows/build.yaml).
 
- [build-status-svg]: https://github.com/grokify/saviynt-user-custom-validation-jar/actions/workflows/build.yaml?branch=main
+ [build-status-svg]: https://github.com/grokify/saviynt-user-custom-validation-jar/actions/workflows/build.yaml/badge.svg?branch=main
  [build-status-url]: https://github.com/grokify/saviynt-user-custom-validation-jar/actions/workflows/build.yaml
